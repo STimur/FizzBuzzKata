@@ -52,7 +52,7 @@ public class FizzBuzz {
     }
 
     private static boolean isBuzz(int n) {
-        return n % 5 == 0;
+        return n % 5 == 0 || (n >= 50 && n <= 59);
     }
 
     public static class NumberOutOfRangeException extends RuntimeException {
