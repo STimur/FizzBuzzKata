@@ -26,7 +26,7 @@ public class FizzBuzz {
     }
 
     private static boolean isFizz(int n) {
-        return n % 3 == 0 || n % 10 == 3;
+        return n % 3 == 0 || n % 10 == 3 || (n >= 30 && n <= 39);
     }
 
     private static String buzz(int n) {
