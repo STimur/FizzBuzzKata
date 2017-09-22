@@ -18,13 +18,8 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void one() throws Exception {
+    public void number() throws Exception {
         assertAnswerForNumber(1, "1");
-    }
-
-    @Test
-    public void two() throws Exception {
-        assertAnswerForNumber(2, "2");
     }
 
     @Test
