@@ -5,21 +5,21 @@ import static org.junit.Assert.assertEquals;
 public class FizzBuzzTest {
     @Test(expected = FizzBuzz.NumberOutOfRangeException.class)
     public void outOfLowerBound() throws Exception {
-        FizzBuzz.ask(0);
+        FizzBuzz.answer(0);
     }
 
     @Test(expected = FizzBuzz.NumberOutOfRangeException.class)
     public void outOfUpperBound() throws Exception {
-        FizzBuzz.ask(101);
+        FizzBuzz.answer(101);
     }
 
     @Test
     public void one() throws Exception {
-        assertEquals("1", FizzBuzz.ask(1));
+        assertEquals("1", FizzBuzz.answer(1));
     }
 
     @Test
     public void two() throws Exception {
-        assertEquals("2", FizzBuzz.ask(2));
+        assertEquals("2", FizzBuzz.answer(2));
     }
 }
