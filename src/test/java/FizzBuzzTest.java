@@ -7,6 +7,14 @@ public class FizzBuzzTest {
         assertEquals(answer, FizzBuzz.answer(n));
     }
 
+    private void assertAnswerIsFizzForNumber(int n) {
+        assertAnswerForNumber(n, "Fizz");
+    }
+
+    private void assertAnswerIsBuzzForNumber(int n) {
+        assertAnswerForNumber(n, "Buzz");
+    }
+
     @Test(expected = FizzBuzz.NumberOutOfRangeException.class)
     public void outOfLowerBound() throws Exception {
         FizzBuzz.answer(0);
@@ -24,15 +32,15 @@ public class FizzBuzzTest {
 
     @Test
     public void fizz() throws Exception {
-        assertAnswerForNumber(3, "Fizz");
-        assertAnswerForNumber(13, "Fizz");
-        assertAnswerForNumber(31, "Fizz");
+        assertAnswerIsFizzForNumber(3);
+        assertAnswerIsFizzForNumber(13);
+        assertAnswerIsFizzForNumber(31);
     }
 
     @Test
     public void buzz() throws Exception {
-        assertAnswerForNumber(5, "Buzz");
-        assertAnswerForNumber(52, "Buzz");
+        assertAnswerIsBuzzForNumber(5);
+        assertAnswerIsBuzzForNumber(52);
     }
 
     @Test
