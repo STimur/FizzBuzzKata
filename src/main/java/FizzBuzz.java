@@ -26,7 +26,23 @@ public class FizzBuzz {
     }
 
     private static boolean isFizz(int n) {
-        return n % 3 == 0 || n % 10 == 3 || (n >= 30 && n <= 39);
+        return dividableByThree(n) || containsThree(n);
+    }
+
+    private static boolean dividableByThree(int n) {
+        return n % 3 == 0;
+    }
+
+    private static boolean containsThree(int n) {
+        return startsWithThree(n) || endsOnThree(n);
+    }
+
+    private static boolean startsWithThree(int n) {
+        return n >= 30 && n <= 39;
+    }
+
+    private static boolean endsOnThree(int n) {
+        return n % 10 == 3;
     }
 
     private static String buzz(int n) {
