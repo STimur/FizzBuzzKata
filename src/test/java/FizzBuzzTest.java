@@ -25,6 +25,7 @@ public class FizzBuzzTest {
     @Test
     public void fizz() throws Exception {
         assertAnswerForNumber(3, "Fizz");
+        assertAnswerForNumber(13, "Fizz");
     }
 
     @Test
