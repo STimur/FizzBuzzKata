@@ -3,6 +3,10 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
+    private void assertAnswerForNumber(int n, String answer) {
+        assertEquals(answer, FizzBuzz.answer(n));
+    }
+
     @Test(expected = FizzBuzz.NumberOutOfRangeException.class)
     public void outOfLowerBound() throws Exception {
         FizzBuzz.answer(0);
@@ -15,21 +19,21 @@ public class FizzBuzzTest {
 
     @Test
     public void one() throws Exception {
-        assertEquals("1", FizzBuzz.answer(1));
+        assertAnswerForNumber(1, "1");
     }
 
     @Test
     public void two() throws Exception {
-        assertEquals("2", FizzBuzz.answer(2));
+        assertAnswerForNumber(2, "2");
     }
 
     @Test
     public void fizz() throws Exception {
-        assertEquals("Fizz", FizzBuzz.answer(3));
+        assertAnswerForNumber(3, "Fizz");
     }
 
     @Test
     public void buzz() throws Exception {
-        assertEquals("Buzz", FizzBuzz.answer(5));
+        assertAnswerForNumber(5, "Buzz");
     }
 }
