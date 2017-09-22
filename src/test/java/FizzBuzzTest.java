@@ -22,4 +22,9 @@ public class FizzBuzzTest {
     public void two() throws Exception {
         assertEquals("2", FizzBuzz.answer(2));
     }
+
+    @Test
+    public void fizz() throws Exception {
+        assertEquals("Fizz", FizzBuzz.answer(3));
+    }
 }

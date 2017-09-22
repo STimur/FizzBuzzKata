@@ -2,6 +2,8 @@ public class FizzBuzz {
     public static String answer(int n) {
         if (isValid(n))
             throw new NumberOutOfRangeException();
+        if (n % 3 == 0)
+            return "Fizz";
         return String.valueOf(n);
     }
 
