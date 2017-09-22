@@ -1,7 +1,8 @@
 public class FizzBuzz {
-    public static void ask(int n) {
+    public static String ask(int n) {
         if (isValid(n))
             throw new NumberOutOfRangeException();
+        return "1";
     }
 
     private static boolean isValid(int n) {
