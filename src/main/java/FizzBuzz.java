@@ -52,7 +52,15 @@ public class FizzBuzz {
     }
 
     private static boolean isBuzz(int n) {
-        return n % 5 == 0 || (n >= 50 && n <= 59);
+        return dividableByFive(n) || startsWithFive(n);
+    }
+
+    private static boolean dividableByFive(int n) {
+        return n % 5 == 0;
+    }
+
+    private static boolean startsWithFive(int n) {
+        return n >= 50 && n <= 59;
     }
 
     public static class NumberOutOfRangeException extends RuntimeException {
