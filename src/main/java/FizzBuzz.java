@@ -2,7 +2,7 @@ public class FizzBuzz {
     public static String ask(int n) {
         if (isValid(n))
             throw new NumberOutOfRangeException();
-        return "1";
+        return String.valueOf(n);
     }
 
     private static boolean isValid(int n) {

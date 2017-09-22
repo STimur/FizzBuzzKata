@@ -17,4 +17,9 @@ public class FizzBuzzTest {
     public void one() throws Exception {
         assertEquals("1", FizzBuzz.ask(1));
     }
+
+    @Test
+    public void two() throws Exception {
+        assertEquals("2", FizzBuzz.ask(2));
+    }
 }
